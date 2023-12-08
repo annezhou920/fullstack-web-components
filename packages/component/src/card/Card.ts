@@ -7,31 +7,31 @@ export class CardComponent extends HTMLElement {
     template.innerHTML = `
         <div>
             <style>
-            :host {
-                display: block;
-                background: var(--color-white); 
-                border-radius: var(--radius-md); 
-                box-shadow: var(--shadow); 
-                overflow: hidden;
-                max-width: 320px;
-            }
+                :host {
+                    display: block;
+                    background: var(--color-white); 
+                    border-radius: var(--radius-md); 
+                    box-shadow: var(--shadow); 
+                    overflow: hidden;
+                    max-width: 320px;
+                }
 
-            ::slotted(*) {
-                padding: 0 var(--padding-lg);
-            }
+                ::slotted(*) {
+                    padding: 0 var(--padding-lg);
+                }
 
-            ::slotted(a:link), ::slotted(a:visited) {
-                display: block;
-            }
+                ::slotted(a:link), ::slotted(a:visited) {
+                    display: block;
+                }
 
-            ::slotted(:last-child) {
-                padding-bottom: var(--margin-lg);
-            }
+                ::slotted(:last-child) {
+                    padding-bottom: var(--margin-lg);
+                }
 
-            ::slotted(img) {
-                width: 100%;
-                padding: 0;
-            }
+                ::slotted(img) {
+                    width: 100%;
+                    padding: 0;
+                }
             </style>
             <header><slot name="header"></slot></header>
             <section><slot name="content"></slot></section>
